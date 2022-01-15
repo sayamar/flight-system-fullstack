@@ -1,0 +1,13 @@
+<div class="my-5 container text-center my-5" >
+
+  
+    <h3><span style="color: #6D0005;">Thank you!!</span> for booking the flight with us</h3>
+    <p>We have sent an email with instructions  to follow  </p>
+
+     Following is the confirmed booking number : {{ reservationResponse.bookingConfirmationNumber }}
+     
+
+   <p>Please click on following download button to dowload  the Flight itinerary</p>
+ 
+   <button class="btn btn-primary mt-3" type="button"  (click)="downloadFile()" >Download PDF</button> 
+  </div>

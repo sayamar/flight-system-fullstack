@@ -1,0 +1,36 @@
+<div class="container">
+  
+    <form id="form1" [formGroup]="cardDetailsForm" (ngSubmit)="submitCardDetails()">
+     <fieldset>
+       <legend class="my-2 py-2">Find Flights</legend>
+     
+       <div class="minContainer" >
+         <div class="col-lg-4">
+          
+           <div class="row">
+            <div class="form-group col-lg-12">
+              <label  for="inputLarge">Card Holder Name</label>
+              <input class="form-control form-control-lg" type="text" formControlName="cardHolderName" placeholder="Card Holder Name" id="inputLarge">
+              <span *ngIf="cardDetailsForm.get('cardHolderName').invalid && (cardDetailsForm.get('cardHolderName').dirty || cardDetailsForm.get('cardHolderName').touched)" class="text-danger">Please enter Card Holder Name</span>
+            </div>
+            <div class="form-group col-lg-12">
+              <label  for="inputLarge">Card Number</label>
+              <input class="form-control form-control-lg" type="text" formControlName="cardNumber" placeholder="Card Number" id="inputLarge">
+              <span  *ngIf="cardDetailsForm.get('cardNumber').invalid && (cardDetailsForm.get('cardNumber').dirty || cardDetailsForm.get('cardNumber').touched)" class="text-danger">Please enter Card Number</span>
+            </div>
+            <div class="form-group col-lg-12">
+              <label  for="inputLarge">Expiry Date</label>
+              <input class="form-control form-control-lg" type="date" formControlName="expiryDate" placeholder="Expiry Date" id="inputLarge">
+              <span  *ngIf="cardDetailsForm.get('expiryDate').invalid && (cardDetailsForm.get('expiryDate').dirty || cardDetailsForm.get('expiryDate').touched)" class="text-danger">Please select Expiry Date</span>
+            </div>
+            <div class="form-group col-lg-3 d-flex align-items-end">
+              <button class="btn btn-light mr-3" type="button">Back</button>
+              <button class="btn btn-primary" type="submit" [disabled]="cardDetailsForm.invalid">Confirm</button>
+            </div>
+           </div>
+         </div>
+       </div>
+    
+   </fieldset>
+  </form>
+ 

@@ -1,0 +1,38 @@
+{
+  "javaType": "com.jpmc.test_interview.FlightReservationRequest",
+  "type": "object",
+  "properties": {
+    "flightId": {
+      "type": "string"
+    },
+
+    "flightNo": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "cardHolderName": {
+      "type": "string"
+    },
+    "cardNumber": {
+      "type": "string"
+    },
+    "expiryDate": {
+      "type": "string"
+    }
+
+  }
+}

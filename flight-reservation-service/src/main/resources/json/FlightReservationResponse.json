@@ -1,0 +1,16 @@
+{
+  "javaType": "com.jpmc.test_interview.FlightReservationResponse",
+  "type": "object",
+
+  "properties": {
+    "bookingConfirmationNumber": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "fileName": {
+      "type": "string"
+    }
+  }
+}

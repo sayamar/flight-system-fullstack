@@ -1,0 +1,42 @@
+<div class="container">
+  
+    <form id="form1" [formGroup]="passengerForm">
+     <fieldset>
+       <legend class="my-2 py-2">Passenger Details</legend>
+     
+       <div class="minContainer" >
+         <div class="col-lg-5">
+          
+           <div class="row">
+            <div class="form-group col-lg-12">
+              <label  for="inputLarge">First Name</label>
+              <input class="form-control form-control-lg" type="text" formControlName="firstName" placeholder="First Name" id="inputLarge">
+              <span *ngIf="passengerForm.get('firstName').invalid && (passengerForm.get('firstName').dirty || passengerForm.get('firstName').touched)" class="text-danger">Please enter First Name</span>
+            </div>
+            <div class="form-group col-lg-12">
+              <label  for="inputLarge">Last Name</label>
+              <input class="form-control form-control-lg" type="text" formControlName="lastName" placeholder="Last Name" id="inputLarge">
+              <span  *ngIf="passengerForm.get('lastName').invalid && (passengerForm.get('lastName').dirty || passengerForm.get('lastName').touched)" class="text-danger">Please enter Last Name</span>
+            </div>
+            <div class="form-group col-lg-12">
+              <label  for="inputLarge">Email</label>
+              <input class="form-control form-control-lg" type="email" formControlName="email" placeholder="Email" id="inputLarge">
+              <span  *ngIf="passengerForm.get('email').invalid && (passengerForm.get('email').dirty || passengerForm.get('email').touched)" class="text-danger">Please enter Email</span>
+            </div>
+            <div class="form-group col-lg-12">
+                <label  for="inputLarge">Phone</label>
+                <input class="form-control form-control-lg" type="number" formControlName="phone" placeholder="Phone" id="inputLarge">
+                <span  *ngIf="passengerForm.get('phone').invalid && (passengerForm.get('phone').dirty || passengerForm.get('phone').touched)" class="text-danger">Please enter Phone</span>
+              </div>
+            <div class="form-group col-lg-12 d-flex align-items-end">
+              <button class="btn btn-light mr-3" type="button">Back</button>
+              <button class="btn btn-primary mt-3" type="button" [disabled]="passengerForm.invalid" (click)="nextClicked()" >Next</button>
+            
+            </div>
+           </div>
+         </div>
+       </div>
+    
+   </fieldset>
+  </form>
+ 

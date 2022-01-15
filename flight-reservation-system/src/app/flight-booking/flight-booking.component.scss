@@ -1,0 +1,46 @@
+legend{
+    font-size: 40px;
+    font-weight: 500;
+    color: #8f1313;
+  }
+  .redColor{
+    color: #8f1313;
+    font-weight: 700;
+  }
+  label{
+    color: #bfbcb6;
+  }
+  .amount{
+    margin: -3px 100px;
+    padding-bottom: 50px;
+    color: #bfbcb6;
+  }
+  #form1{
+    margin-bottom: 100px;
+  }
+  .saveBtn{
+    color: #8f1313;
+    font-weight: 500;
+    margin: 20px 0px;
+    padding:10px 30px;
+  }
+  .validate{
+    color: red;
+  }
+  chkBox{
+    float: left;
+  }
+  input:checked + label {
+    color: gray;
+  }
+  input[type="checkbox"]{
+    background: white!important;
+  
+  }
+  .sectiontwo{
+    float: left;
+  }
+  
+  .ag-theme-alpine {
+    height: 300px;width: auto;
+  }
