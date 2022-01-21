@@ -225,7 +225,7 @@ If everything goes well, you will see like below:
 ## Improvements:
 
 	1. can use API Key from UI to Flight Reservation Service API's ( like oAuth2, JWT Tokens ) 
-	2. Spring Cloud Gateway to access the Services ( like Reverse Proxy ) 
+	2. Spring Cloud Gateway to access the Services  
 
 
 
