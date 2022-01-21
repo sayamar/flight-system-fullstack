@@ -17,7 +17,7 @@ public class PaymentServiceImplTest {
     private PaymentServiceImpl paymentServiceImpl;
 
     @Test
-    public void testShouldConfirmSuccessfulPayment() {
+    public void test_ShouldConfirmSuccessIfPaymentRequestIsThrough() {
 
         // Given
         PaymentDto paymentDto = FlightTestDataProvider.getPaymentDtoForSuccess();
@@ -30,7 +30,7 @@ public class PaymentServiceImplTest {
     }
 
     @Test
-    public void testShouldConfirmFailurePayment() {
+    public void test_ShouldConfirmFailureIfPaymentRequestIsNotThrough() {
 
         // Given
         PaymentDto paymentDto = FlightTestDataProvider.getPaymentDtoForFailure();

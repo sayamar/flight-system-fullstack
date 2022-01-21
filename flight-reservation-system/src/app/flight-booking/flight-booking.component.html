@@ -32,7 +32,7 @@
               <span  *ngIf="flightSearchForm.get('departureDate').invalid && (flightSearchForm.get('departureDate').dirty || flightSearchForm.get('departureDate').touched)" class="text-danger">Please enter Departure Date</span>
             </div>
             <div class="form-group col-lg-3 d-flex align-items-end">
-              <button class="btn btn-primary" type="submit">Search</button>
+              <button class="btn btn-primary" type="submit"  [disabled]="flightSearchForm.invalid">Search</button>
             </div>
            </div>
          </div>

@@ -18,6 +18,12 @@
     "lastName": {
       "type": "string"
     },
+    "middleName": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "string"
+    },
     "email": {
       "type": "string"
     },

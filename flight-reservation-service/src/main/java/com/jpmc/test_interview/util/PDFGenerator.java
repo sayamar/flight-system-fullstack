@@ -74,6 +74,10 @@ public class PDFGenerator {
         table.addCell(reservation.getFirstName());
         table.addCell("Last Name");
         table.addCell(reservation.getLastName());
+        table.addCell("Middle Name");
+        table.addCell(reservation.getMiddleName());
+        table.addCell("Date Of Birth");
+        table.addCell(reservation.getDateOfBirth());
         table.addCell("Email");
         table.addCell(reservation.getEmail());
         table.addCell("Phone");

@@ -58,6 +58,8 @@ public class FlightMapper {
                 .email(reservationRequest.getEmail())
                 .firstName(reservationRequest.getFirstName())
                 .lastName(reservationRequest.getLastName())
+                .middleName(reservationRequest.getMiddleName())
+                .dateOfBirth(reservationRequest.getDateOfBirth())
                 .phone(reservationRequest.getPhone())
                 .build();
     }
@@ -73,4 +75,5 @@ public class FlightMapper {
                 .airLines(eachFlight.getAirLine())
                 .build();
     }
+
 }

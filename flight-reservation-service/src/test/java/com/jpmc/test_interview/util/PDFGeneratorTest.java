@@ -27,7 +27,7 @@ public class PDFGeneratorTest {
     private FlightConfig flightConfig;
 
     @Test
-    public void testShouldGenerateThePDFAndReturnsFilePath() {
+    public void test_ShouldGenerateThePDFAndReturnsFilePath() {
 
         // Given
         FlightReservationRequest flightReservationRequest = FlightTestDataProvider.getRequest();
@@ -46,7 +46,7 @@ public class PDFGeneratorTest {
     }
 
     @Test
-    public void testShouldThrowFileNotFoundExceptionIfPathIsWrong() {
+    public void test_ShouldThrowFileNotFoundExceptionIfPathIsWrong() {
 
         // Given
         FlightReservationRequest flightReservationRequest = FlightTestDataProvider.getRequest();

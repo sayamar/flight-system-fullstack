@@ -32,7 +32,7 @@ public class ReservationControllerIntegrationTest {
     ReservationController reservationController;
 
     @Test
-    public void testShouldSuccessfullyBookTheFlightAndReturnsConfirmation() {
+    public void test_ShouldSuccessfullyBookTheFlightAndReturnsConfirmation() {
 
         // Given
         String bookFlightUrl = "http://localhost:" + port + "/api/v1/bookFlight";
@@ -55,7 +55,7 @@ public class ReservationControllerIntegrationTest {
     }
 
     @Test
-    public void testShouldReturnBadRequest404IfRequestIsNull() {
+    public void test_ShouldReturnBadRequest404IfFlightRequestDataIsNull() {
 
         // Given
         String bookFlightUrl = "http://localhost:" + port + "/api/v1/bookFlight";

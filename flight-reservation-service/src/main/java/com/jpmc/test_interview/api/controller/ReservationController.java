@@ -28,8 +28,10 @@ public class ReservationController {
     @PostMapping(value = "/bookFlight", produces = "application/json")
     public ResponseEntity<FlightReservationResponse> bookFlight(
             @RequestBody @NotNull FlightReservationRequest flightReservationRequest) {
+
         log.info("Request for booking the flight {} ", flightReservationRequest.getFlightNo());
         ReservationDto reservationDto = this.reservationService.bookFlight(flightReservationRequest);
+
         return new ResponseEntity<>(flightResponseMapper.mapToResponse(reservationDto), HttpStatus.OK);
     }
 

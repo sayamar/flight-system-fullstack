@@ -30,7 +30,7 @@ public class FlightServiceImplTest {
 
 
     @Test
-    public void testShouldSuccessfullyReturnsFlightsWithGivenParameters() {
+    public void test_ShouldSuccessfullyReturnsFlightsWithGivenParameters() {
 
         // Given
         String dCity = "Singapore";
@@ -59,7 +59,7 @@ public class FlightServiceImplTest {
     }
 
     @Test
-    public void testShouldNotReturnFlightsWithGivenParameters() {
+    public void test_ShouldNotReturnFlightsWithGivenParameters() {
 
         // Given
         String dCity = "China";

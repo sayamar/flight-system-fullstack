@@ -89,6 +89,8 @@ public final class FlightTestDataProvider {
         flightReservationRequest.setFlightNo("SQ100");
         flightReservationRequest.setFirstName("Shiva");
         flightReservationRequest.setLastName("Sankar");
+        flightReservationRequest.setMiddleName("Narayana");
+        flightReservationRequest.setDateOfBirth("1995-03-15");
         flightReservationRequest.setPhone("90284789");
         flightReservationRequest.setEmail("ms@gmail.com");
         flightReservationRequest.setCardHolderName("MS");

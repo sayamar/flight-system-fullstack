@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { PassengerService } from '../services/passenger.service';
 import { ReservationService } from '../services/reservation.service';
 
@@ -23,7 +23,8 @@ export class CardDetailsComponent implements OnInit {
   constructor(private fb:FormBuilder, 
     private passengerService: PassengerService, 
     private router: Router, 
-    private reservationService: ReservationService) { }
+    private reservationService: ReservationService,
+    private location: Location) { }
 
   submitCardDetails() {
     const passengerDetails = this.passengerService.getPassengerDetails();
@@ -37,6 +38,10 @@ export class CardDetailsComponent implements OnInit {
         this.router.navigate(['/confirmation']);
       }
     });
+  }
+
+  back() {
+    this.location.back();
   }
 
   ngOnInit(): void {

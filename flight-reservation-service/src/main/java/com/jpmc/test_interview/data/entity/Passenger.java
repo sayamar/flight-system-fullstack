@@ -4,6 +4,8 @@ import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
+import java.util.Date;
 
 @Slf4j
 @Entity
@@ -20,6 +22,8 @@ public class Passenger {
     private Long passengerId;
     private String firstName;
     private String lastName;
+    private String middleName;
+    private String dateOfBirth;
     private String email;
     private String phone;
 

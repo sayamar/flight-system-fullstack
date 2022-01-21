@@ -33,13 +33,6 @@ export class ConfirmationComponent implements OnInit {
       .subscribe(blob => saveAs(blob, this.reservationResponse.fileName));
   }
 
-  // download() {
-  //   console.log(this.reservationResponse);
-  //   this.reservationService.downloadTicket(this.reservationResponse.fileName).subscribe((res: any) => {
-  //     console.log();
-  //   });
-  // }
-
 }
 
 

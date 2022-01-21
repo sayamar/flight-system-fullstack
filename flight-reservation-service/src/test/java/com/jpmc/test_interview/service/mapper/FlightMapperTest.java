@@ -8,11 +8,15 @@ import com.jpmc.test_interview.dto.FlightDto;
 import com.jpmc.test_interview.dto.PaymentDto;
 import com.jpmc.test_interview.dto.ReservationDto;
 import com.jpmc.test_interview.util.FlightConstants;
+import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.util.StringUtils;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +29,7 @@ public class FlightMapperTest {
     private FlightMapper flightMapper;
 
     @Test
-    public void mapFlightListToFlightDtoList(){
+    public void test_ShouldMapFlightListToFlightDtoList(){
         // Given
         List<Flight> flightList = FlightTestDataProvider.getFlightList();
         // When
@@ -42,7 +46,7 @@ public class FlightMapperTest {
     }
 
     @Test
-    public void mapFlightRequestToPaymentDto() {
+    public void test_ShouldMapFlightRequestToPaymentDto() {
         // Given
         FlightReservationRequest flightReservationRequest = FlightTestDataProvider.getRequest();
         // When
@@ -55,7 +59,7 @@ public class FlightMapperTest {
 
     }
     @Test
-    public void mapFlightRequestToReservation() {
+    public void test_ShouldMapFlightRequestToReservation() {
         // Given
         FlightReservationRequest flightReservationRequest = FlightTestDataProvider.getRequest();
         Flight flight = FlightTestDataProvider.getFlight();
@@ -66,12 +70,14 @@ public class FlightMapperTest {
         assertNotNull(FlightConstants.BOOKING_NEW,reservation.getStatus());
         assertEquals(flightReservationRequest.getFirstName(),reservation.getPassenger().getFirstName());
         assertEquals(flightReservationRequest.getLastName(),reservation.getPassenger().getLastName());
+        assertEquals(flightReservationRequest.getMiddleName(),reservation.getPassenger().getMiddleName());
+        assertEquals(flightReservationRequest.getDateOfBirth(),reservation.getPassenger().getDateOfBirth());
         assertEquals(flightReservationRequest.getPhone(),reservation.getPassenger().getPhone());
         assertEquals(flightReservationRequest.getEmail(),reservation.getPassenger().getEmail());
 
     }
     @Test
-    public void mapToReservationDto() {
+    public void test_ShouldMapToReservationDto() {
         // Given
         Reservation reservation = FlightTestDataProvider.getReservationDetails();
         String filePath ="C:/Users/Maruthi/Data";
@@ -82,6 +88,11 @@ public class FlightMapperTest {
         assertEquals(reservation.getBookingConfirmationNumber(),reservationDto.getBookingConfirmationNumber());
         assertEquals(reservation.getStatus(),reservationDto.getStatus());
         assertEquals(filePath,reservationDto.getFileName());
+    }
+
+    @SneakyThrows
+    private Date convertStringToDate(String date) {
+        return StringUtils.isEmpty(date) ? null : new SimpleDateFormat("yyyy-MM-dd").parse(date);
     }
 
 }

@@ -42,7 +42,7 @@ public class ReservationServiceImplTest {
     private PaymentService paymentService;
 
     @Test
-    public void testShouldBookTheFlightAndReturnsConfirmation() {
+    public void test_ShouldBookTheFlightAndReturnsConfirmation() {
 
         // Given
         FlightReservationRequest flightReservationRequest = FlightTestDataProvider.getRequest();
@@ -68,7 +68,7 @@ public class ReservationServiceImplTest {
     }
 
     @Test
-    public void testShouldNotBookTheFlightIfPaymentFailure() {
+    public void test_ShouldNotBookTheFlightIfPaymentFailures() {
 
         // Given
         FlightReservationRequest flightReservationRequest = FlightTestDataProvider.getRequest();
@@ -91,7 +91,7 @@ public class ReservationServiceImplTest {
     }
 
     @Test
-    public void testShouldReturnsExceptionIfFlightNotFound() {
+    public void test_ShouldReturnsExceptionIfFlightNotFound() {
 
         // Given
         FlightReservationRequest flightReservationRequest = FlightTestDataProvider.getRequest();

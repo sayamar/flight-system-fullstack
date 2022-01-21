@@ -24,7 +24,7 @@
               <span  *ngIf="cardDetailsForm.get('expiryDate').invalid && (cardDetailsForm.get('expiryDate').dirty || cardDetailsForm.get('expiryDate').touched)" class="text-danger">Please select Expiry Date</span>
             </div>
             <div class="form-group col-lg-3 d-flex align-items-end">
-              <button class="btn btn-light mr-3" type="button">Back</button>
+              <button class="btn btn-light mr-3" type="button" (click)="back()" >Back</button>
               <button class="btn btn-primary" type="submit" [disabled]="cardDetailsForm.invalid">Confirm</button>
             </div>
            </div>

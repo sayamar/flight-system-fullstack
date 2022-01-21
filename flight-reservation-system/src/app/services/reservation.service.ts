@@ -30,23 +30,15 @@ export class ReservationService {
   }
 
   bookFlight(data: any){
-    console.log(data)
+    console.log('Booking flight.....>')
     return this.httpClient.post(this.bookingFlightUrl, data, httpOptions);
   }
 
   downloadTicket(file: string | undefined): Observable<Blob> {
-    console.log('inside '+file);
     const pathUrlToDownload = `${this.downloadPdfUrl}/`+ file;
     return this.httpClient.get(pathUrlToDownload, {
       responseType: 'blob'
     });
   }
-
-  // downloadTicket(fileName : string) {
-  //   const pathUrlToDownload = `${this.downloadPdfUrl}/`+ fileName;
-  //   console.log(pathUrlToDownload)
-  //   return this.httpClient.get(pathUrlToDownload,httpOptions)
-  // }
-
    
 }

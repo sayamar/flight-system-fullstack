@@ -36,7 +36,7 @@ public class FlightControllerIntegrationTest {
 
 
     @Test
-    public void testShouldFindAndReturnsFlights() {
+    public void test_ShouldFindAndReturnsFlights() {
 
         // Given
         String findFLightsUrl = "http://localhost:" + port + "/api/v1/flights";
@@ -70,7 +70,7 @@ public class FlightControllerIntegrationTest {
     }
 
     @Test
-    public void testShouldNotReturnFlightsForGivenParameters() {
+    public void test_ShouldNotReturnFlightsIfParameterDataNotMatch() {
 
         // Given
         String findFLightsUrl = "http://localhost:" + port + "/api/v1/flights";
